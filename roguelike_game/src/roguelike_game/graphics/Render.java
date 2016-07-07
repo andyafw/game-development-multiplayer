@@ -78,7 +78,7 @@ public class Render extends JPanel {
     
     public void drawBackground(Graphics g) {
         for(int y = 0; y < 19; y++) {
-            for (int x = 0; x < 28; x++) {
+            for (int x = 0; x < 35; x++) {
                 g.drawImage(Sprite.WALL.getImage(), x * size, y * size, size, size, null);
             }
         }

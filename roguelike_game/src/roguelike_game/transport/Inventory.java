@@ -45,6 +45,7 @@ public class Inventory {
     public int getInventoryMax() {
         return items_can_hold;
     }
+    
     public boolean addItem(Item item) {
         if(inventoryItems.size() < items_can_hold) {
             inventoryItems.add(item);
