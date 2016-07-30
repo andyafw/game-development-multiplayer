@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import roguelike_game.entity.item.Item;
 
 /**
- *
+ * @version 07-13-16
  * @author andyafw
  */
 public class Inventory {
@@ -34,17 +34,9 @@ public class Inventory {
         }
     }
     
-    public int getInventoryWidth() {
-        return inv_width;
-    }
-    
-    public int getInventoryHeight() {
-        return inv_height;
-    }
-    
-    public int getInventoryMax() {
-        return items_can_hold;
-    }
+    public int getInventoryWidth()  { return inv_width;}
+    public int getInventoryHeight() { return inv_height;}
+    public int getInventoryMax()    { return items_can_hold;}
     
     public boolean addItem(Item item) {
         if(inventoryItems.size() < items_can_hold) {

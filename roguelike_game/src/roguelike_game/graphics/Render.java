@@ -77,11 +77,13 @@ public class Render extends JPanel {
     }
     
     public void drawBackground(Graphics g) {
-        for(int y = 0; y < 19; y++) {
-            for (int x = 0; x < 35; x++) {
-                g.drawImage(Sprite.WALL.getImage(), x * size, y * size, size, size, null);
-            }
-        }
+        //for(int y = 0; y < 19; y++) {
+        //    for (int x = 0; x < 35; x++) {
+        //        g.drawImage(Sprite.SECOND_FLOOR.getImage(), x * size, y * size, size, size, null);
+        //    }
+        //}
+    	g.setColor(Color.BLACK);
+    	g.fillRect(0, 0, res_width, res_height);
     }
     
     public void renderScreen(Graphics g, int startx, int starty, int limitx, int limity, int scrollx, int scrolly) {
@@ -148,10 +150,10 @@ public class Render extends JPanel {
     private Image findImage(int i) {
         switch(i) {
             case 0:
-                return Sprite.WALL.getImage();
+                return Sprite.NEW_WALL.getImage();
             default:
                 //if don't know number inputed then send floor image
-                return Sprite.FLOOR.getImage();
+                return Sprite.EMPTY.getImage();
         }
     }
 }

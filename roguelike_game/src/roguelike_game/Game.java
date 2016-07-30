@@ -89,43 +89,47 @@ public class Game extends JFrame implements Runnable {
     }
     
     public void update(boolean[] wait) {
-    	for (byte i = 0; i < wait.length; i++) {
-            boolean isPressed = false;
-            switch (i) {
-                case 0:
-                    isPressed = move.UP;
+    	for (byte i = 0; i < wait.length; i++) {//loop through length of wait array
+            boolean isPressed = false;//set ispressed to false
+            switch (i) {//similar to an if else but simpler
+                case 0://if i = 0
+                    isPressed = move.UP;//ispressed = the value of move.up
                     break;
-                case 1:
-                    isPressed = move.DOWN;
+                case 1://if i = 1
+                    isPressed = move.DOWN;//ispressed = the value of move.down
                     break;
-                case 2:
-                    isPressed = move.LEFT;
+                case 2://if i = 2;
+                    isPressed = move.LEFT;//ispressed = the value of move.left
                     break;
-                case 3:
-                    isPressed = move.RIGHT;
+                case 3://if i = 3
+                    isPressed = move.RIGHT;//ispressed = the value of move.right
                     break;
             }
         
-            if (wait[i]) {
-                if (!isPressed) {
-                    wait[i] = false;
+            if (wait[i]) {//if wait i is true continue
+                if (!isPressed) {//if ispressed = false
+                    wait[i] = false;//wait i also = false
                 }
-            } else if (isPressed) {
-                int speed = 1;
-                switch (i) {
-                case 0: checkCollision(Sprite.PLAYER_UP, 0, -speed);break;
-                case 1: checkCollision(Sprite.PLAYER_DOWN, 0, speed); break;
-                case 2: checkCollision(Sprite.PLAYER_LEFT, -speed, 0); break;
-                case 3: checkCollision(Sprite.PLAYER_RIGHT, speed, 0); break;
+            } else if (isPressed) {//else if ispressed is true
+                int speed = 1;//set speed to 1
+                switch (i) {//loop through what the value of i is
+	                //if i = 0 then checkcollision and move sprite up
+	                case 0: checkCollision(Sprite.PLAYER_UP, 0, -speed);break;
+	                //if i = 0 then checkcollision and move sprite down
+	                case 1: checkCollision(Sprite.PLAYER_DOWN, 0, speed); break;
+	                //if i = 0 then checkcollision and move sprite left
+	                case 2: checkCollision(Sprite.PLAYER_LEFT, -speed, 0); break;
+	                //if i = 0 then checkcollision and move sprite right
+	                case 3: checkCollision(Sprite.PLAYER_RIGHT, speed, 0); break;
                 }                        
-                wait[i] = true;
+                wait[i] = true;//set wait i to true before updating again
             }
         }
     }
     
     public void checkCollision(Sprite sprite, int x, int y) {
-        if (!collision(x, y)) {//right
-            updatePlayer(sprite, x, y);
+        if (!collision(x, y)) {//if there is not a collision at x and y then continue
+            updatePlayer(sprite, x, y);//move sprite to new position
         }
     }
     

@@ -11,11 +11,12 @@ public class Sprite {
     
     public static Sprite EMPTY     = new Sprite(64, 0, 0, SpriteSheet.CHARACTERS);
     
+    public static Sprite SECOND_FLOOR = new Sprite(64, 4, 0, SpriteSheet.CHARACTERS);
     public static Sprite WALL      = new Sprite(64, 1, 0, SpriteSheet.CHARACTERS);
     public static Sprite ISOWALL   = new Sprite(64, 4, 0, SpriteSheet.CHARACTERS);
     
     public static Sprite FLOOR     = new Sprite(64, 2, 0, SpriteSheet.CHARACTERS);
-    public static Sprite ISOFLOOR  = new Sprite(64, 3, 0, SpriteSheet.CHARACTERS);
+    public static Sprite NEW_WALL  = new Sprite(64, 3, 0, SpriteSheet.CHARACTERS);
     
     public static Sprite WEAPON    = new Sprite(64, 0, 5, SpriteSheet.CHARACTERS);
     public static Sprite UNICON    = new Sprite(64, 1, 5, SpriteSheet.CHARACTERS);
