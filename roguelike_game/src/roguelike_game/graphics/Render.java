@@ -97,7 +97,7 @@ public class Render extends JPanel {
                     continue;
                 } else {
                     Point p = new Point(x * size, y * size);
-                    g.drawImage(game.tilemap.items[y][x].getSprite().getImage(), p.x - scrollx, p.y - scrolly, size, size, null);
+                    g.drawImage(game.tilemap.items[y][x].getSpriteImage(), p.x - scrollx, p.y - scrolly, size, size, null);
                 }   
             }
         }
@@ -125,7 +125,7 @@ public class Render extends JPanel {
                         g.setColor(Color.green);
                         g.drawRect(x * size + inv_window_start, y * size + armor_start, size, size);
                         if(game.player.getInventory().getEquip(next) != null) {
-                        	g.drawImage(game.player.getInventory().getEquip(next).getSprite().getImage(), x * size + inv_window_start, y * size + armor_start, size, size, null);
+                        	g.drawImage(game.player.getInventory().getEquip(next).getSpriteImage(), x * size + inv_window_start, y * size + armor_start, size, size, null);
                         }
                         next++;
                     }
@@ -141,7 +141,7 @@ public class Render extends JPanel {
                 g.setColor(Color.yellow);
                 g.drawRect(x * size + inv_window_start, y * size + inventory_start, size, size);
                 if(game.player.getInventory().getItem(x, y) != null) {
-                    g.drawImage(game.player.getInventory().getItem(x, y).getSprite().getImage(), x * size + inv_window_start, y * size + inventory_start, size, size, null);
+                    g.drawImage(game.player.getInventory().getItem(x, y).getSpriteImage(), x * size + inv_window_start, y * size + inventory_start, size, size, null);
                 }
             }
         }

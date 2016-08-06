@@ -5,6 +5,8 @@
 package roguelike_game.entity.item;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
 import roguelike_game.graphics.Sprite;
 
 /**
@@ -35,8 +37,8 @@ public class Item {
         this.type = type;
     }
     
-    public Sprite getSprite() {
-        return sprite;
+    public BufferedImage getSpriteImage() {
+        return sprite.getImage();
     }
     
     public void render(Graphics g, int xscroll, int yscroll) {
