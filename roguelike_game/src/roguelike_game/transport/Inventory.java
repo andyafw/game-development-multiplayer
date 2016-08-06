@@ -48,11 +48,10 @@ public class Inventory {
         //TODO: need to figure out a way to tell user inventory is full
     }
     
-    public Item getItem(int x, int y) {
-        int pos = y * inv_width + x;
-        if(inventoryItems.size() > pos) {
-            if(inventoryItems.get(pos) != null) {
-                return inventoryItems.get(pos);
+    public Item getItem(int id) {
+        if(inventoryItems.size() > id) {
+            if(inventoryItems.get(id) != null) {
+                return inventoryItems.get(id);
             }
         } 
         return null;

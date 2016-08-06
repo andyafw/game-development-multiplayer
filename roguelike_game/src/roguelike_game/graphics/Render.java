@@ -120,12 +120,14 @@ public class Render extends JPanel {
             for (int x = 0; x < arm_width; x++) {
                 if(next < 10) {
                     if(positions[next].x == x && positions[next].y == y) {
+                    	int xx = x * size + inv_window_start;
+                    	int yy = y * size + armor_start;
                         g.setColor(Color.black);
-                        g.fillRect(x * size + inv_window_start, y * size + armor_start, size, size);
+                        g.fillRect(xx, yy, size, size);
                         g.setColor(Color.green);
-                        g.drawRect(x * size + inv_window_start, y * size + armor_start, size, size);
+                        g.drawRect(xx, yy, size, size);
                         if(game.player.getInventory().getEquip(next) != null) {
-                        	g.drawImage(game.player.getInventory().getEquip(next).getSpriteImage(), x * size + inv_window_start, y * size + armor_start, size, size, null);
+                        	game.player.getInventory().getEquip(next).render(g, xx, yy, 0);
                         }
                         next++;
                     }
@@ -136,12 +138,14 @@ public class Render extends JPanel {
         //create player inventory
         for(int y = 0; y < inv_height; y++) {
             for (int x = 0; x < inv_width; x++) {
+            	int xx = x * size + inv_window_start;
+            	int yy = y * size + inventory_start;
                 g.setColor(Color.black);
-                g.fillRect(x * size + inv_window_start, y * size + inventory_start, size, size);
+                g.fillRect(xx, yy, size, size);
                 g.setColor(Color.yellow);
-                g.drawRect(x * size + inv_window_start, y * size + inventory_start, size, size);
-                if(game.player.getInventory().getItem(x, y) != null) {
-                    g.drawImage(game.player.getInventory().getItem(x, y).getSpriteImage(), x * size + inv_window_start, y * size + inventory_start, size, size, null);
+                g.drawRect(xx, yy, size, size);
+                if(game.player.getInventory().getItem(y * inv_width + x) != null) {
+                    game.player.getInventory().getItem(y * inv_width + x).render(g, xx, yy, 0);
                 }
             }
         }

@@ -5,19 +5,21 @@
 package roguelike_game.entity;
 
 import roguelike_game.entity.item.Item;
+import roguelike_game.graphics.Sprite;
 import roguelike_game.transport.Inventory;
 
 /**
- *
+ * @version 08-06-16
  * @author andyafw
  */
 public class Mob extends Entity {
     protected int hp;
     protected int xp;
-    private Inventory inventory;
+    protected Sprite sprite;
+    protected Inventory inventory;
     
-    public Mob(int x, int y) {
-        super(x, y, 32, 32);
+    public Mob(int x, int y, int hp) {
+        super(x, y);
         inventory = new Inventory(7, 7);
     }
     
@@ -55,5 +57,13 @@ public class Mob extends Entity {
     
     public int getXp() {
         return xp;
+    }
+    
+    public void setSprite(Sprite sprite) {
+        this.sprite = sprite;
+    }
+    
+    public Sprite getSprite() {
+        return sprite;
     }
 }
