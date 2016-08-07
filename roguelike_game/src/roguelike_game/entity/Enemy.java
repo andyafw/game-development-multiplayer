@@ -10,7 +10,7 @@ package roguelike_game.entity;
  */
 public class Enemy extends Mob {
 	
-    public Enemy(int x, int y) {
-        super(x, y);
+    public Enemy(int x, int y, int hp) {
+        super(x, y, hp);
     }
 }

@@ -18,12 +18,8 @@ public class Sprite {
     public static Sprite FLOOR     = new Sprite(64, 2, 0, SpriteSheet.CHARACTERS);
     public static Sprite NEW_WALL  = new Sprite(64, 3, 0, SpriteSheet.CHARACTERS);
     
-    public static Sprite WEAPON    = new Sprite(64, 0, 5, SpriteSheet.CHARACTERS);
-    public static Sprite UNICON    = new Sprite(64, 1, 5, SpriteSheet.CHARACTERS);
     public static Sprite SWORD     = new Sprite(64, 2, 5, SpriteSheet.CHARACTERS);
     public static Sprite WAND      = new Sprite(64, 3, 5, SpriteSheet.CHARACTERS);
-    
-    public static Sprite WALL2     = new Sprite(64, 0, 0, SpriteSheet.WALLS);
     
     
     public final int SIZE;

@@ -13,9 +13,9 @@ import roguelike_game.entity.item.Item;
  */
 public class Inventory {
     protected int items_can_wear = 10;		//helmet, hands, chest armor, belt, ring, pants, left-hand sword, amulet, boots, and right-hand sword
-    protected int items_can_hold = 49;
-    protected int inv_width = 7;
-    protected int inv_height = 7;
+    protected int items_can_hold;
+    protected int inv_width;
+    protected int inv_height;
     
     protected ArrayList<Item> equippedItems;
     protected ArrayList<Item> inventoryItems;
@@ -48,11 +48,10 @@ public class Inventory {
         //TODO: need to figure out a way to tell user inventory is full
     }
     
-    public Item getItem(int x, int y) {
-        int pos = y * inv_width + x;
-        if(inventoryItems.size() > pos) {
-            if(inventoryItems.get(pos) != null) {
-                return inventoryItems.get(pos);
+    public Item getItem(int id) {
+        if(inventoryItems.size() > id) {
+            if(inventoryItems.get(id) != null) {
+                return inventoryItems.get(id);
             }
         } 
         return null;
@@ -67,9 +66,9 @@ public class Inventory {
         return false;
     }
     
-    public Item getEquip(int i) {
-        if(i < equippedItems.size()) {
-            return equippedItems.get(i);
+    public Item getEquip(int pos) {
+        if(pos < equippedItems.size()) {
+            return equippedItems.get(pos);
         } else {
             return null;
         }
