@@ -62,7 +62,7 @@ public class SQLConnection {
         // repeated calls to execute but we
         // choose to make a new one each time
         rs = st.executeQuery(expression);    // run the query
-
+        System.out.println("going into dump");
         // do something with the result set.
         dump(rs);
         st.close();    // NOTE!! if you close a statement the associated ResultSet is
@@ -105,11 +105,15 @@ public class SQLConnection {
         // rs.next() points to next row and returns true
         // or false if there is no next row, which breaks the loop
         for (; rs.next(); ) {
-            for (i = 0; i < colmax; ++i) {
+            for (i = 0; i < colmax; i++) {
                 o = rs.getObject(i + 1);    // Is SQL the first column is indexed
-
-                // with 1 not 0
-                System.out.print(o.toString() + " ");
+                if(o == null) {
+                	System.out.println("o is null");
+                }
+                else {
+                	// with 1 not 0
+                	System.out.print(o.toString() + " ");
+                }
             }
 
             System.out.println(" ");
@@ -122,14 +126,13 @@ public class SQLConnection {
 
         try {
             db = new SQLConnection("db_file");
+            System.out.println("Opened file");
         } catch (Exception ex1) {
             ex1.printStackTrace();    // could not start db
-
             return;                   // bye bye
         }
 
         try {
-
             //make an empty table
             //
             // by declaring the id column IDENTITY, the db will automatically
@@ -161,7 +164,7 @@ public class SQLConnection {
 
             // do a query
             db.query("SELECT * FROM sample_table WHERE num_col < 250");
-
+            System.out.println("update values");
             // at end of program
             db.shutdown();
         } catch (SQLException ex3) {
