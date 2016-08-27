@@ -41,14 +41,8 @@ public class SQLConnection {
     }
 
     public void shutdown() throws SQLException {
-
-        Statement st = conn.createStatement();
-
-        // db writes out to files and performs clean shuts down
-        // otherwise there will be an unclean shutdown
-        // when program ends
-        st.execute("SHUTDOWN");
         conn.close();    // if there are no other open connection
+        System.out.println("Connection closed");
     }
 
 //use for SQL command SELECT
@@ -105,10 +99,10 @@ public class SQLConnection {
         // rs.next() points to next row and returns true
         // or false if there is no next row, which breaks the loop
         for (; rs.next(); ) {
-            for (i = 0; i < colmax; i++) {
-                o = rs.getObject(i + 1);    // Is SQL the first column is indexed
+            for (i = 1; i < colmax; i++) {
+                o = rs.getObject(i + 1);    // In SQL the first column is indexed
                 if(o == null) {
-                	System.out.println("o is null");
+                	System.out.print("o is null ");
                 }
                 else {
                 	// with 1 not 0
