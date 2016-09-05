@@ -3,15 +3,17 @@ package roguelike_game;
 import java.awt.BorderLayout;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
 
 import javax.swing.JFrame;
+
 import roguelike_game.developer.DeveloperConsole;
 import roguelike_game.entity.Player;
 import roguelike_game.events.Movement;
 import roguelike_game.graphics.Render;
 import roguelike_game.graphics.Sprite;
 
-public class Game extends JFrame implements Runnable, WindowListener {
+public class Game extends JFrame implements Runnable {
 	private static final long serialVersionUID = -8786702884271086916L;
 	public TileMap tilemap;
     public Player player;
@@ -39,6 +41,11 @@ public class Game extends JFrame implements Runnable, WindowListener {
 	    addKeyListener(move);
 	    addMouseListener(move);
 	    addMouseMotionListener(move);
+	    addWindowListener(new WindowAdapter() {
+	    	public void windowClosing(WindowEvent arg0) {
+	    		stop();
+	    	}
+	    });
 	    
 	    add(render, BorderLayout.CENTER);
 	}
@@ -94,17 +101,20 @@ public class Game extends JFrame implements Runnable, WindowListener {
     }
     
     public void start() {
-    	if(!thread.isAlive()) {
+    	if(thread == null) {
     		thread = new Thread(this);
     		thread.start();
+    		running = true;
     	}
     }
     
     public void stop() {
-    	try {
-    		thread.join();
-    	} catch(InterruptedException ex) {
-    		ex.printStackTrace();
+    	if(thread != null) {
+	    	try {
+	    		thread.join(5);
+	    	} catch(InterruptedException ex) {
+	    		ex.printStackTrace();
+	    	}
     	}
     }
     
@@ -161,16 +171,5 @@ public class Game extends JFrame implements Runnable, WindowListener {
         game.setTitle(game.version); 
         game.setVisible(true);
         game.start();
-        game.running = true;
     }
-    
-    @Override public void windowClosing(WindowEvent arg0) {
-    	stop();
-    }
-	@Override public void windowActivated(WindowEvent arg0) {}
-	@Override public void windowClosed(WindowEvent arg0) {}
-	@Override public void windowDeactivated(WindowEvent arg0) {}
-	@Override public void windowDeiconified(WindowEvent arg0) {}
-	@Override public void windowIconified(WindowEvent arg0) {}
-	@Override public void windowOpened(WindowEvent arg0) {}
 }
