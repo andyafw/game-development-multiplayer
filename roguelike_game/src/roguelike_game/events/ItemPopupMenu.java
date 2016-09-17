@@ -31,7 +31,8 @@ public class ItemPopupMenu extends JPopupMenu {
         item.setBackground(background);
         item.addActionListener(new ItemPickupListener(game, x, y));
         add(item = new JMenuItem("Equip Item"));
-        if(game.tilemap.items[y][x].getType() != Item.Type.SWORD) {
+        Item.Type type = game.tilemap.items[y][x].getType();
+        if(type == Item.Type.ITEM) {
             item.setEnabled(false);
         }
         item.setForeground(foreground);

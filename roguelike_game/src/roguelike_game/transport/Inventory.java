@@ -28,14 +28,14 @@ public class Inventory {
         inv_height = height;
         items_can_hold = inv_width * inv_height;
         equippedItems = new ArrayList<Item>(items_can_wear);
-        for(int i = 0; i < items_can_wear; i++) { //for loop used to test the limits of the inventory to see if we get errors when it is full
+        /*for(int i = 0; i < items_can_wear; i++) { //for loop used to test the limits of the inventory to see if we get errors when it is full
         	equippedItems.add(Item.SWORD);//add item sword everytime the for loop runs
-        }
+        }*/
         inventoryItems = new ArrayList<Item>(items_can_hold);
         //checking the same thing as items_can_wear
-        for(int i = 0; i < items_can_hold; i++) {
+        /*for(int i = 0; i < items_can_hold; i++) {
         	inventoryItems.add(Item.WAND);//adding wand this time
-        }
+        }*/
     }
     
     //methods used to get variables
