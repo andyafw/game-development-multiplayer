@@ -10,9 +10,10 @@ import java.awt.image.BufferedImage;
 import roguelike_game.graphics.Sprite;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Item{
     public static Item SWORD = new Item("Iron Sword", Item.Type.SWORD, Sprite.SWORD);
     public static Item WAND = new Item("Long Wand", Item.Type.ITEM, Sprite.WAND);

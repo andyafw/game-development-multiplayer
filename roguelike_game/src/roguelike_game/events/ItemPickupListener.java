@@ -10,9 +10,10 @@ import roguelike_game.Game;
 import roguelike_game.entity.item.Item;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class ItemPickupListener implements ActionListener {
     Game game;
     private int x, y;

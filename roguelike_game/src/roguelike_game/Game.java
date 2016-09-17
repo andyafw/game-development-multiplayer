@@ -13,8 +13,13 @@ import roguelike_game.events.Movement;
 import roguelike_game.graphics.Render;
 import roguelike_game.graphics.Sprite;
 
+/**
+ * @version 09/17/2016
+ * @author Andy Walser
+ */
+
+@SuppressWarnings("serial")
 public class Game extends JFrame implements Runnable {
-	private static final long serialVersionUID = -8786702884271086916L;
 	public TileMap tilemap;
     public Player player;
     public Movement move;

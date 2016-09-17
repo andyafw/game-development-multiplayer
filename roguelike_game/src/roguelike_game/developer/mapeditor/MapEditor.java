@@ -18,9 +18,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
+@SuppressWarnings("serial")
 public class MapEditor extends JFrame {
     
     private ArrayList<Integer> tilelist;

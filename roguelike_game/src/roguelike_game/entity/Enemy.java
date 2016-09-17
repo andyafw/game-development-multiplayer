@@ -5,9 +5,10 @@
 package roguelike_game.entity;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Enemy extends Mob {
 	
     public Enemy(int x, int y, int hp) {

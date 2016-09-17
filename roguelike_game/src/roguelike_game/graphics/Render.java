@@ -13,12 +13,12 @@ import javax.swing.JPanel;
 import roguelike_game.Game;
 
 /**
- *
- * @author andyafw
- * @version 04/07/2016
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
+@SuppressWarnings("serial")
 public class Render extends JPanel {
-	private static final long serialVersionUID = 9189866751182256813L;
 	public int size, width, height,res_width, res_height;//int for game variables
     public int inv_window_start, inv_width, inv_height, inv_size, inventory_start; //init inventory variables
     public int armor_start, arm_width, arm_height; //init armor variables 

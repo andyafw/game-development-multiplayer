@@ -5,9 +5,10 @@
 package roguelike_game.entity;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class ClassType {
     public static ClassType WARRIOR     = new ClassType(10, 5);
     public static ClassType ASSASSIN    = new ClassType(10, 10);

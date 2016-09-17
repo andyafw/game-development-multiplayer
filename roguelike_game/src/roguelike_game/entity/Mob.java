@@ -9,9 +9,10 @@ import roguelike_game.graphics.Sprite;
 import roguelike_game.transport.Inventory;
 
 /**
- * @version 08-06-16
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Mob extends Entity {
     protected int hp;
     protected int xp;

@@ -2,6 +2,11 @@ package roguelike_game.graphics;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * @version 09/17/2016
+ * @author Andy Walser
+ */
+
 public class Sprite {
 
     public static Sprite PLAYER_UP    = new Sprite(64, 0, 1, SpriteSheet.CHARACTERS);

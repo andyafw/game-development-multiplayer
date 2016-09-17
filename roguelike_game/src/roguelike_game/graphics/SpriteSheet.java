@@ -5,6 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+/**
+ * @version 09/17/2016
+ * @author Andy Walser
+ */
+
 public class SpriteSheet {
     public static SpriteSheet CHARACTERS = new SpriteSheet("./res/sprites/character.png");
     public static SpriteSheet SPRITES = new SpriteSheet("./res/sprites/sprites.png");

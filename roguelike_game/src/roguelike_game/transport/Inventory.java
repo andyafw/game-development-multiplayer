@@ -8,9 +8,10 @@ import java.util.ArrayList;
 import roguelike_game.entity.item.Item;
 
 /**
- * @version 07-13-16
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Inventory {
     protected int items_can_wear = 10;		//helmet, hands, chest armor, belt, ring, pants, left-hand sword, amulet, boots, and right-hand sword
     protected int items_can_hold;           //how many items that can be held in inventory

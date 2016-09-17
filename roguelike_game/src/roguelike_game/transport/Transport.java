@@ -5,9 +5,10 @@
 package roguelike_game.transport;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Transport {
     public static Transport CAR = new Transport(2);
     public static Transport WALK = new Transport(1);

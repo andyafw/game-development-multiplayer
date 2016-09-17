@@ -8,9 +8,8 @@ import java.util.Random;
 import roguelike_game.entity.item.Item;
 
 /**
- *
- * @author andy Walser
- * @version 10-20-13
+ * @version 09/17/2016
+ * @author Andy Walser
  */
 
 //used to draw the world map

@@ -3,9 +3,10 @@ package roguelike_game.entity;
 import roguelike_game.graphics.Sprite;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public abstract class Entity {
     protected int x;
     protected int y;

@@ -17,6 +17,12 @@ import java.sql.Statement;
  *
  * Author: Karl Meissner karl@meissnersd.com
  */
+
+/**
+ * @version 09/17/2016
+ * @author Andy Walser
+ */
+
 public class SQLConnection {
 
     Connection conn;                                                //our connnection to the db - presist for life of program

@@ -11,11 +11,12 @@ import roguelike_game.Game;
 import roguelike_game.entity.item.Item;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
+@SuppressWarnings("serial")
 public class ItemPopupMenu extends JPopupMenu {
-	private static final long serialVersionUID = 6988592249192881328L;
 
 	public ItemPopupMenu(Game game, int x, int y) {
         Color foreground = Color.green;

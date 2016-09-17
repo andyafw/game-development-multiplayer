@@ -7,9 +7,10 @@ package roguelike_game;
 import java.awt.image.BufferedImage;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Tile {
     private int x;
     private int y;

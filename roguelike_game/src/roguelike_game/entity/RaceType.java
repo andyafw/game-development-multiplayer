@@ -5,9 +5,10 @@
 package roguelike_game.entity;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class RaceType {
     public static RaceType ORC        = new RaceType();
     public static RaceType GOBLIN     = new RaceType();

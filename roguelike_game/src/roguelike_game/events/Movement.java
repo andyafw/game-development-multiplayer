@@ -13,9 +13,10 @@ import java.awt.event.MouseMotionListener;
 import roguelike_game.Game;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Movement implements KeyListener, MouseListener, MouseMotionListener {
     public boolean UP        = false;
     public boolean DOWN      = false;

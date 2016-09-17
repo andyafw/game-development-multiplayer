@@ -5,9 +5,10 @@
 package roguelike_game;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
 public class Camera {
     public int x, y;
     

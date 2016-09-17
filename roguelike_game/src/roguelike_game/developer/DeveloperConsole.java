@@ -14,11 +14,12 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
- *
- * @author andyafw
+ * @version 09/17/2016
+ * @author Andy Walser
  */
+
+@SuppressWarnings("serial")
 public class DeveloperConsole extends JFrame {
-	private static final long serialVersionUID = 7689675837098389297L;
 	private static DeveloperConsole console;
     private JTextField output;
     private JTextArea input;

@@ -1,5 +1,10 @@
 package roguelike_game;
 
+/**
+ * @version 09/17/2016
+ * @author Andy Walser
+ */
+
 final public class FPScounter  
 {  
     private static int startTime;  
